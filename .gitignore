@@ -1,0 +1,12 @@
+cogitatio/settings/local.py
+cogitatio/settings/env_values.py
+cogitatio/assets/uploads
+.DS_Store
+*.swp
+*.pyc
+/dropbox
+/reports
+dump.rdb
+.coverage*
+htmlcov
+*.rdb
