@@ -13,6 +13,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     url(r'^auth/', include('auth.urls')),
 
+    url(r'^idea/', include('idea.urls', namespace='idea')),
     url(r'^admin/', include(admin.site.urls)),
 
     url(r'^$', TemplateView.as_view(template_name="home.html")),

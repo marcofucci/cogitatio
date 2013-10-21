@@ -150,12 +150,14 @@ INSTALLED_APPS = (
 
 PROJECT_APPS = (
     'auth',
+    'idea',
 )
 
 INSTALLED_APPS += PROJECT_APPS
 
 
 LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = '/auth/login/'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
