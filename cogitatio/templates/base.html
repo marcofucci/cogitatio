@@ -23,14 +23,27 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-default" role="navigation">
+      <ul class="nav navbar-nav navbar-right">
+        {% if user.is_authenticated %}
+        <li>
+          <form method="post" action="{% url 'account_logout' %}">
+            {% csrf_token %}
+            <button class="btn" type="submit">Log Out</button>
+          </form>
+        </li>
+        {% else %}
+        <li><a href="{% url 'github_login' %}">Sign in with GitHub</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+
     <div class="container">
+    {% block content %}
+      <p>Use this document as a way to quick start any new project.</p>
+    {% endblock content %}
 
-      {% block content %}
-        <p>Use this document as a way to quick start any new project.</p>
-      {% endblock content %}
-
-    </div> <!-- /container -->
-
+    </div>
 
     <!-- Le javascript
     ================================================== -->

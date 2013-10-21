@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}GitHub Login Failure{% endblock %}
+
+{% block content %}
+<h1>GitHub Login Failure</h1>
+
+<p>An error occurred while attempting to login via your GitHub account</p>
+
+<p>Please <a href="{% url 'github_login' %}">try again</a>.</p>
+
+{% endblock %}

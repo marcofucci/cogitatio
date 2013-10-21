@@ -10,3 +10,4 @@ dump.rdb
 .coverage*
 htmlcov
 *.rdb
+TODO.txt
